@@ -1,6 +1,6 @@
-import { BLACK, DARK_GREY, WHITE } from "@audiophile/theme/colors.theme";
+import { BLACK, WHITE } from "@dine/theme/colors.theme";
 import styled from "styled-components";
-import { DESKTOP_X_PADDING, TABLET_X_PADDING, MOBILE_X_PADDING } from "@audiophile/theme/spacing.theme";
+import { DESKTOP_X_PADDING, TABLET_X_PADDING, MOBILE_X_PADDING } from "@dine/theme/spacing.theme";
 
 export const FooterContainer = styled.footer`
     background-color: ${BLACK};
@@ -8,12 +8,6 @@ export const FooterContainer = styled.footer`
     display: flex;
     flex-direction: column;
     gap: 31px;
-    position: relative;
-    margin-top: 50px;
-
-    hr {
-        width: 100%;
-    }
 
     @media screen and (max-width: 1200px) {
         padding: 72px ${TABLET_X_PADDING};
@@ -24,7 +18,7 @@ export const FooterContainer = styled.footer`
     }
 `;
 
-export const FooterFirstRow = styled.div`
+export const FooterRow = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,10 +29,9 @@ export const FooterFirstRow = styled.div`
     }
 `;
 
-export const FooterOptions = styled.div`
+export const FooterColumn = styled.div`
     display: flex;
-    align-items: center;
-    gap: 25px;
+    flex-direction: column;
 
     @media screen and (max-width: 600px) {
         flex-direction: column;
@@ -46,65 +39,13 @@ export const FooterOptions = styled.div`
     }
 `;
 
-export const FooterSecondRow = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    @media screen and (max-width: 600px) {
-        flex-direction: column;
-        gap: 15px;
-    }
-`;
-
-export const FooterLeft = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 50%;
-
-    @media screen and (max-width: 600px) {
-        width: 100%;
-    }
-`;
-
-export const FooterInfo = styled.span`
+export const FooterLabel = styled.span`
     color: ${WHITE};
 
-    font-family: Manrope;
+    font-family: League Spartan;
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
     line-height: 25px;
+    text-transform: uppercase;
 `; 
-
-export const FooterCopyright = styled.span`
-    color: ${WHITE};
-
-    font-family: Manrope;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 25px;
-`; 
-
-export const SocialContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-
-    @media screen and (max-width: 600px) {
-       justify-content: center;
-       align-items: center;
-    }
-`;
-
-export const SocialRow = styled.div`
-    display: flex;
-    gap: 10px;
-
-    img:hover {
-        filter: hue-rotate(0deg);
-    }
-`;

@@ -1,5 +1,5 @@
 import { DESKTOP_X_PADDING, MOBILE_X_PADDING, TABLET_X_PADDING } from "@dine/theme/spacing.theme";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const HeaderContainer = styled.header`
     display: flex;
@@ -9,7 +9,10 @@ export const HeaderContainer = styled.header`
     background-color: transparent;
 
     @media screen and (max-width: 1200px) {
-        padding: 50px ${TABLET_X_PADDING};
+        ${props => props.home ? css`
+            justify-content: center;
+            padding-top: 60%;
+        `: ''}
     }
 
     @media screen and (max-width: 600px) {
