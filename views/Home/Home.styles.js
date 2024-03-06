@@ -1,7 +1,6 @@
 import { DESKTOP_X_PADDING, TABLET_X_PADDING } from "@dine/theme/spacing.theme";
 import { BLACK, MIRAGE, WHITE } from "@dine/theme/colors.theme";
-import styled from "styled-components";
-import css from "styled-jsx/css";
+import styled, { css } from "styled-components";
 
 export const HomeHeroContainer = styled.div`
     background-image: url('/homepage/hero-bg-desktop.jpg');
@@ -20,7 +19,7 @@ export const HeroColumn = styled.div`
     flex-direction: column;
     margin-top: 50px;
     gap: 20px;
-    width: 40%;
+    width: 35%;
 
     @media screen and (max-width: 1200px) {
         width: 50%;
@@ -103,7 +102,7 @@ export const RestaurantInfoContainer = styled.div`
         }
         `: css`
             &:nth-child(1) {
-                padding: 50px 0;
+                padding: 100px 0;
             }
         `
     };

@@ -9,3 +9,5 @@ export const SHUTTLE_GRAY = '#5c6779';
 
 export const BLACK = '#000000';
 export const WHITE = '#FFFFFF';
+
+export const ERROR = '#CD2C2C';
