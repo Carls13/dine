@@ -1,5 +1,5 @@
 import { DESKTOP_X_PADDING, TABLET_X_PADDING } from "@dine/theme/spacing.theme";
-import { BLACK, MIRAGE, WHITE } from "@dine/theme/colors.theme";
+import { BLACK, COD_GRAY, MIRAGE, WHITE } from "@dine/theme/colors.theme";
 import styled, { css } from "styled-components";
 
 export const HomeHeroContainer = styled.div`
@@ -9,7 +9,13 @@ export const HomeHeroContainer = styled.div`
 
     @media screen and (max-width: 1200px) {
         background-image: url('/homepage/hero-bg-tablet.jpg');
-        background-position: -180px;
+        background-position: -60px;
+    }
+
+    @media screen and (max-width: 600px) {
+        background-image: url('/homepage/hero-bg-mobile.jpg');
+        background-position: -10px;
+        height: 120vh;
     }
 `;
 
@@ -27,6 +33,11 @@ export const HeroColumn = styled.div`
         margin-left: 25%;
         text-align: center;
     }
+
+    @media screen and (max-width: 1200px) {
+        width: 80%;
+        margin-left: 10%;
+    }
 `;
 
 
@@ -39,6 +50,11 @@ export const HeroTitle = styled.h1`
     font-weight: 300;
     line-height: 80px;
     letter-spacing: 1.429px;
+
+    @media screen and (max-width: 600px) {
+        font-size: 32px;
+        line-height: 40px;
+    }
 `;
 
 export const HeroText = styled.p`
@@ -79,6 +95,23 @@ export const RestaurantDetailsContainer = styled.div`
     flex-direction: column;
     background-image: url('/patterns/pattern-curve-top-right.svg');
     background-repeat: no-repeat;
+    min-height: 60vh;
+
+    button {
+        &:hover {
+            border: 2px solid ${BLACK};
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        position: relative;
+        z-index: 0;
+        min-height: 40vh;
+    }
+
+    @media screen and (max-width: 600px) {
+        min-height: 60vh;
+    }
 `;
 
 export const RestaurantInfoContainer = styled.div`
@@ -88,7 +121,22 @@ export const RestaurantInfoContainer = styled.div`
     gap: 100px;
 
     @media screen and (max-width: 1200px) {
-        flex-direction: column;
+        margin: 20px ${TABLET_X_PADDING};
+        flex-direction: ${props => props.reverse ? 'column-reverse' : 'column'};
+    }
+
+    @media screen and (min-width: 1200px) {
+        ${props => !props.events ?
+            css`
+            &:nth-child(2) {
+                margin-bottom: -50px;
+            }
+            `: css`
+                &:nth-child(1) {
+                    padding: 100px 0;
+                }
+            `
+        };
     }
 
     ${props => !props.events ?
@@ -96,16 +144,10 @@ export const RestaurantInfoContainer = styled.div`
         &:nth-child(1) {
             margin-top: -50px;
         }
-
-        &:nth-child(2) {
-            margin-bottom: -50px;
-        }
-        `: css`
-            &:nth-child(1) {
-                padding: 100px 0;
-            }
-        `
+       
+        `: ''
     };
+   
 
     img {
         box-shadow: 0px 5px 20px 0px #00000033;
@@ -116,6 +158,10 @@ export const RestaurantInfoColumn = styled.div`
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    @media screen and (max-width: 1200px) {
+        align-items: center;
+    }
 `;
 
 export const RestaurantInfoTitle = styled.h1`
@@ -127,6 +173,10 @@ export const RestaurantInfoTitle = styled.h1`
     font-weight: 300;
     line-height: 48px;
     letter-spacing: 1.429px;
+
+    @media screen and (max-width: 600px) {
+        text-align: center;
+    }
 `;
 
 export const RestaurantInfoText = styled.p`
@@ -137,6 +187,16 @@ export const RestaurantInfoText = styled.p`
     font-style: normal;
     font-weight: 500;
     line-height: 30px;
+
+    @media screen and (max-width: 1200px) {
+        text-align: center;
+        width: 70%;
+    }
+    
+    @media screen and (max-width: 600px) {
+        text-align: center;
+        width: 100%;
+    }
 `;
 
 export const MenuContainer = styled.div`
@@ -147,6 +207,7 @@ export const MenuContainer = styled.div`
 
     @media screen and (max-width: 1200px) {
         flex-direction: column;
+        align-items: center;
         padding: 150px ${TABLET_X_PADDING};
     }
 `; 
@@ -185,6 +246,10 @@ export const MenuOptionsContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    hr {
+        border: 2px solid ${COD_GRAY};
+    }
 `;
 
 export const MenuItemContainer = styled.div`
@@ -194,6 +259,15 @@ export const MenuItemContainer = styled.div`
 
     @media screen and (max-width: 1200px) {
         gap: 30px;
+    }
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 `; 
 
@@ -212,6 +286,10 @@ export const MenuItemTitle = styled.h5`
     font-weight: 700;
     line-height: 48px;
     letter-spacing: 1.429px;
+
+    @media screen and (max-width: 600px) {
+        text-align: center;
+    }
 `;
 
 export const MenuItemText = styled.p`
@@ -222,6 +300,10 @@ export const MenuItemText = styled.p`
     font-style: normal;
     font-weight: 300;
     line-height: 30px;
+
+    @media screen and (max-width: 600px) {
+        text-align: center;
+    }
 `;
 
 export const ReservationContainer = styled.div`
@@ -249,7 +331,12 @@ export const ReservationTitle = styled.h2`
     font-family: League Spartan;
     font-size: 48px;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 700;
     line-height: 48px;
     letter-spacing: 1.429px;
+
+    @media screen and (max-width: 600px) {
+        font-size: 32px;
+        text-align: center;
+    }
 `;

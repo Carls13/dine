@@ -25,7 +25,7 @@ export const FooterRow = styled.div`
 
     @media screen and (max-width: 600px) {
         flex-direction: column;
-        gap: 15px;
+        gap: 30px;
     }
 `;
 

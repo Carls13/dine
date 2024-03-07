@@ -5,6 +5,17 @@ export const EventsSelectorContainer = styled.div`
    display: flex;
    flex-direction: column;
    gap: 10px;
+
+   @media screen and (max-width: 1200px) {
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
 `;
 
 export const EventOption = styled.span`

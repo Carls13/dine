@@ -13,3 +13,39 @@ h1, h2, h3, h4, h5, h6, p {
 button {
   cursor: pointer;
 }
+
+.desktop-image {
+  display: block;
+}
+
+.tablet-image, .mobile-image {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .tablet-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .mobile-image, .desktop-image, .lines {
+    display: none;
+  }
+
+  .behind {
+    z-index: -1!important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mobile-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .tablet-image, .desktop-image {
+    display: none;
+  }
+}

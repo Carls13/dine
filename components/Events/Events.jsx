@@ -16,19 +16,21 @@ export const Events = () => {
 
     return (
         <RestaurantDetailsContainer>
-                <RestaurantInfoContainer events={true}>
-                    <Image src={eventImageDesktop} alt={eventTitle} width={540} height={600} />
-                    <RestaurantInfoColumn>
-                        <RestaurantInfoTitle><b>{eventTitle}</b></RestaurantInfoTitle>
-                        <RestaurantInfoText>{eventText}</RestaurantInfoText>
-                        <MainButton onClick={() => router.push('/reservation')}>BOOK A TABLE</MainButton>
-                        <EventsSelectorContainer>
-                            <EventOption active={selectedEventType === 'family'} onClick={() => setSelectedEventType('family')}>FAMILY GATHERING</EventOption>
-                            <EventOption active={selectedEventType === 'special'} onClick={() => setSelectedEventType('special')}>SPECIAL EVENTS</EventOption>
-                            <EventOption active={selectedEventType === 'social'} onClick={() => setSelectedEventType('social')}>SOCIAL EVENTS</EventOption>
-                        </EventsSelectorContainer>
-                    </RestaurantInfoColumn>
-                </RestaurantInfoContainer>
-            </RestaurantDetailsContainer>
+            <RestaurantInfoContainer events={true}>
+                <Image src={eventImageDesktop} className="desktop-image" alt={eventTitle} width={540} height={600} />
+                <Image src={eventImageTablet} className="tablet-image" alt={eventTitle} width={540} height={600} />
+                <Image src={eventImageMobile} className="mobile-image" alt={eventTitle} width={540} height={600} />
+                <RestaurantInfoColumn>
+                    <RestaurantInfoTitle><b>{eventTitle}</b></RestaurantInfoTitle>
+                    <RestaurantInfoText>{eventText}</RestaurantInfoText>
+                    <MainButton onClick={() => router.push('/reservation')}>BOOK A TABLE</MainButton>
+                    <EventsSelectorContainer>
+                        <EventOption active={selectedEventType === 'family'} onClick={() => setSelectedEventType('family')}>FAMILY GATHERING</EventOption>
+                        <EventOption active={selectedEventType === 'special'} onClick={() => setSelectedEventType('special')}>SPECIAL EVENTS</EventOption>
+                        <EventOption active={selectedEventType === 'social'} onClick={() => setSelectedEventType('social')}>SOCIAL EVENTS</EventOption>
+                    </EventsSelectorContainer>
+                </RestaurantInfoColumn>
+            </RestaurantInfoContainer>
+        </RestaurantDetailsContainer>
     );
 };

@@ -16,6 +16,10 @@ export const HeaderContainer = styled.header`
     }
 
     @media screen and (max-width: 600px) {
-        padding: 25px ${MOBILE_X_PADDING};
+        justify-content: center;
+        padding: 50px ${MOBILE_X_PADDING};
+        ${props => props.home ? css`
+            padding-top: 60%;
+        `: ''}
     }
 `;
