@@ -49,7 +49,9 @@ export const HomewView = () => {
                 </RestaurantInfoColumn>
                 <MenuOptionsContainer>
                     <MenuItemContainer>
-                        <Image src='/homepage/salmon-desktop-tablet.jpg' alt="Salmon" width={128} height={96} />
+                        <Image src='/homepage/salmon-desktop-tablet.jpg' className="desktop-image" alt="Salmon" width={128} height={96} />
+                        <Image src='/homepage/salmon-desktop-tablet.jpg' className="tablet-image" alt="Salmon" width={128} height={96} />
+                        <Image src='/homepage/salmon-mobile.jpg' className="mobile-image" alt="Salmon" width={128} height={96} />
                         <MenuItemColumn>
                             <MenuItemTitle>Seared Salmon Fillet</MenuItemTitle>
                             <MenuItemText>Our locally sourced salmon served 
@@ -58,7 +60,9 @@ export const HomewView = () => {
                     </MenuItemContainer>
                     <hr />
                     <MenuItemContainer>
-                        <Image src='/homepage/beef-desktop-tablet.jpg' alt="Beef" width={128} height={96} />
+                        <Image src='/homepage/beef-desktop-tablet.jpg' className="desktop-image"  alt="Beef" width={128} height={96} />
+                        <Image src='/homepage/beef-desktop-tablet.jpg' className="tablet-image" alt="Beef" width={128} height={96} />
+                        <Image src='/homepage/beef-mobile.jpg' className="mobile-image" alt="Beef" width={128} height={96} />
                         <MenuItemColumn>
                             <MenuItemTitle>Rosemary Filet Mignon</MenuItemTitle>
                             <MenuItemText>Our prime beef served to your taste with a delicious choice of seasonal sides.</MenuItemText>
@@ -66,7 +70,9 @@ export const HomewView = () => {
                     </MenuItemContainer>
                     <hr />
                     <MenuItemContainer>
-                        <Image src='/homepage/chocolate-desktop-tablet.jpg' alt="Chocolate" width={128} height={96} />
+                        <Image src='/homepage/chocolate-desktop-tablet.jpg' className="desktop-image" alt="Chocolate" width={128} height={96} />
+                        <Image src='/homepage/chocolate-desktop-tablet.jpg' className="tablet-image" alt="Chocolate" width={128} height={96} />
+                        <Image src='/homepage/chocolate-mobile.jpg' className="mobile-image" alt="Chocolate" width={128} height={96} />
                         <MenuItemColumn>
                             <MenuItemTitle>Seared Salmon Fillet</MenuItemTitle>
                             <MenuItemText>Our locally sourced salmon served 
