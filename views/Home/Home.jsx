@@ -74,9 +74,8 @@ export const HomewView = () => {
                         <Image src='/homepage/chocolate-desktop-tablet.jpg' className="tablet-image" alt="Chocolate" width={128} height={96} />
                         <Image src='/homepage/chocolate-mobile.jpg' className="mobile-image" alt="Chocolate" width={128} height={96} />
                         <MenuItemColumn>
-                            <MenuItemTitle>Seared Salmon Fillet</MenuItemTitle>
-                            <MenuItemText>Our locally sourced salmon served 
-                                with a refreshing buckwheat summer salad.</MenuItemText>
+                            <MenuItemTitle>Summer Fruit Chocolate Mousse</MenuItemTitle>
+                            <MenuItemText>Creamy mousse combined with summer fruits and dark chocolate shavings.</MenuItemText>
                         </MenuItemColumn>
                     </MenuItemContainer>
                 </MenuOptionsContainer>

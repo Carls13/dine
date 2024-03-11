@@ -4,9 +4,9 @@ import styled from "styled-components";
 
 export const DarkOverlay = styled.div`
     position: absolute;
-    top: 100px;
     left: 0;
     width: 100%;
+    top: 0;
     height: 200vh;
     background: ${BLACK}88;
     z-index: 10;

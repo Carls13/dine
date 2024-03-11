@@ -284,7 +284,7 @@ export const MenuItemTitle = styled.h5`
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 48px;
+    line-height: 26px;
     letter-spacing: 1.429px;
 
     @media screen and (max-width: 600px) {

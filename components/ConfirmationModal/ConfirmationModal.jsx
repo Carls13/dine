@@ -8,12 +8,17 @@ import {
 } from './ConfirmationModal.styles';
 import Image from "next/image";
 import { MainButton } from "@dine/views/Home/Home.styles";
+import { useEffect } from "react";
 
 export const ConfirmationModal = ({ hidden }) => {
     const router = useRouter();
     const handleBackToHome = () => {
         router.push('/');
     }
+
+    useEffect(() => {
+        if (!hidden) window.scrollTo(0, 0);
+    }, [hidden])
 
     return (
         <DarkOverlay hidden={hidden}>
